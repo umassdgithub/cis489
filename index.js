@@ -4,10 +4,10 @@ const fs = require('fs');
 
 
 app.get('/',(req,res)=>{
+    res.send(`Opened`);
     fs.readFile("./test.txt",(err,data)=>{
         res.send(`data: ${data}`);
     })
-    
     const data = req.query["q"]
     fs.appendFile("./test.txt",data,(err)=>{
         if(err){
