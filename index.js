@@ -4,4 +4,5 @@ const app = express()
 app.get('/',(req,res)=>{
     res.send("Working fine");
 })
-app.listen(3000,()=>{console.log('Server running')})
+let port = process.env.PORT || 8080
+app.listen(port,()=>{console.log('Server running')})
